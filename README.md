@@ -6,6 +6,7 @@
 ![Static Badge](https://img.shields.io/badge/Canvas_API-black?logo=Canvas)
 
 <p>Проект выполнен с целью закрепления полученных навыков программирования на JavaScript и практики взаимодействия с Canvas API</p>
+
 ___
 
 ## **Запуск приложения**
