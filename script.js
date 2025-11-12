@@ -17,10 +17,10 @@ let isDrawing = false,
 	selectedColor = "#000";
 
 const setCanvasBckgrd = () => {
-	ctx.fillStyle = '#fff';
+	ctx.fillStyle = "#fff";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = selectedColor;
-}
+};
 
 window.addEventListener("load", () => {
 	canvas.width = canvas.offsetWidth;
@@ -37,6 +37,7 @@ const drawRect = (e) => {
 			prevMouseY - e.offsetY
 		);
 	}
+
 	ctx.fillRect(
 		e.offsetX,
 		e.offsetY,
@@ -47,10 +48,12 @@ const drawRect = (e) => {
 
 const drawCircle = (e) => {
 	ctx.beginPath();
+
 	let radius = Math.sqrt(
 		Math.pow(prevMouseX - e.offsetX, 2) +
 			Math.pow(prevMouseY - e.offsetY, 2)
 	);
+
 	ctx.arc(prevMouseX, prevMouseY, radius, 0, 2 * Math.PI);
 	fillColor.checked ? ctx.fill() : ctx.stroke();
 };
@@ -125,7 +128,7 @@ clearCanvas.addEventListener("click", () => {
 });
 
 saveImg.addEventListener("click", () => {
-    const link = document.createElement('a');
+	const link = document.createElement("a");
 	link.download = `${Date.now()}.jpg`;
 	link.href = canvas.toDataURL();
 	link.click();
